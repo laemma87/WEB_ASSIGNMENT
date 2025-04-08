@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+</head>
+<body>
+
+<h2>FORM VALIDATION</h2>
+
+<form id="validate">
+    <label>Enter Your Name:</label><br>
+    <input type="text" id="fullname"><br><br>
+
+    <label>Enter Your District:</label><br>
+    <input type="text" id="district"><br><br>
+
+    <label>Enter Your Sector:</label><br>
+    <input type="text" id="sector"><br><br>
+
+    <button type="submit">SAVE</button>
+</form>
+
+<script>
+    document.getElementById("validate").addEventListener("submit", function(event) {
+        
+        let fullname = document.getElementById("fullname").value.trim();
+        let district = document.getElementById("district").value.trim();
+        let sector = document.getElementById("sector").value.trim();
+
+        if (fullname === "") {
+            alert("Please enter your Full Name.");
+            event.preventDefault();
+            return;
+        }
+
+        if (district === "") {
+            alert("Please enter your District.");
+            event.preventDefault();
+            return;
+        }
+
+        if (sector === "") {
+            alert("Please enter your sector.");
+            event.preventDefault();
+            return;
+        }
+
+    });
+</script>
+
+</body>
+</html>
